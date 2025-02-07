@@ -67,7 +67,7 @@ Here's a snapshot of my GitHub activity:
 
 ---
 
-### 🏆 GitHub Trophies  
+## 🏆 GitHub Trophies  
 ![GitHub Trophies](https://github-profile-trophy.vercel.app/?username=headless-start&theme=radical&no-frame=true&no-bg=false&margin-w=4)
 
 ---
