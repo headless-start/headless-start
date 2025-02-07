@@ -7,7 +7,7 @@
 
 ## 👨‍💻 About Me
 
-With a strong foundation in both **Academia 📖** and **Industry 💼**, I specialize in **Machine Learning 🤖**, **Computer Vision 🖼️**, and **Natural Language Processing 🔤**. My expertise lies in **Data Science 📊**, **Neural Network Optimization 🧠**, and **Feature Engineering**, leveraging advanced techniques to extract meaningful insights from raw data.  
+With a strong foundation in both **Academics 📖** and **Industry 💼**, I specialize in **Machine Learning 🤖**, **Computer Vision 🖼️**, and **Natural Language Processing 🔤**. My expertise lies in **Data Science 📊**, **Deep Learning🧠**,and **Feature Engineering**, leveraging advanced techniques to extract meaningful insights from raw data.  
 
 I am passionate about transforming data into **impactful solutions**, optimizing models for efficiency, and applying **cutting-edge AI techniques** to solve real-world challenges. Whether it's building robust **computer vision applications**, enhancing NLP models, or fine-tuning neural networks, I'm always eager to push the boundaries of AI innovation. 🚀  
 
