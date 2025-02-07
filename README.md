@@ -61,14 +61,14 @@ Here are some of the technologies and tools I work with:
 
 Here's a snapshot of my GitHub activity:
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=headless-start&show_icons=true&theme=radical)
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=headless-start&show_icons=true&theme=radical&cache_seconds=1800)
 
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=headless-start&layout=compact&theme=radical)
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=headless-start&layout=compact&theme=radical&cache_seconds=1800)
 
 ---
 
 ## 🏆 GitHub Trophies  
-![GitHub Trophies](https://github-profile-trophy.vercel.app/?username=headless-start&theme=radical&no-frame=true&no-bg=false&margin-w=4)
+![GitHub Trophies](https://github-profile-trophy.vercel.app/?username=headless-start&theme=radical&no-frame=true&no-bg=false&margin-w=4&cache=1800)
 
 ---
 
