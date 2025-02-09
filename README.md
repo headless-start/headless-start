@@ -7,9 +7,8 @@
 
 ## 👨‍💻 About Me
 
-With a strong foundation in both **Academics 📖** and **Industry 💼**, I specialize in **Machine Learning 🤖**, **Computer Vision 🖼️**, and **Natural Language Processing 🔤**. My expertise lies in **Data Science 📊**, **Deep Learning🧠**,and **Feature Engineering**, leveraging advanced techniques to extract meaningful insights from raw data.  
-
-I am passionate about transforming data into **impactful solutions**, optimizing models for efficiency, and applying **cutting-edge AI techniques** to solve real-world challenges. Whether it's building robust **computer vision applications**, enhancing NLP models, or fine-tuning neural networks, I'm always eager to push the boundaries of AI innovation. 🚀  
+With a strong foundation in Academia 📖 and Industry 💼, I specialize in Machine Learning 🤖, Computer Vision 🖼️, Natural Language Processing (NLP) 🔤, and Large Language Models (LLMs) 🏆.
+Passionate about AI innovation, I focus on building efficient models, developing scalable AI solutions, and applying software development to create impactful, real-world applications. 
 
 Let's collaborate and build something amazing! ✨  
 
