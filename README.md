@@ -62,9 +62,9 @@ Here's a snapshot of my GitHub activity:
 
 ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=headless-start&show_icons=true&theme=radical&cache_seconds=170)
 
-![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=headless-start&how_icons=true&theme=radical&cache_seconds=170)
+![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=headless-start&how_icons=true&theme=radical&cache_seconds=175)
 
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=headless-start&layout=compact&theme=radical&cache_seconds=170)
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=headless-start&layout=compact&theme=radical&cache_seconds=175)
 
 ---
 
