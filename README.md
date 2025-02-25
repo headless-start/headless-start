@@ -60,7 +60,7 @@ Here are some of the technologies and tools I work with:
 
 Here's a snapshot of my GitHub activity:
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=headless-start&show_icons=true&theme=radical&cache_seconds=170)
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=headless-start&show_icons=true&theme=radical&cache_seconds=175)
 
 ![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=headless-start&how_icons=true&theme=radical&cache_seconds=175)
 
