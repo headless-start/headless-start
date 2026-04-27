@@ -7,7 +7,7 @@
 
 ## 👨‍💻 About Me
 
-With a strong foundation in Academia 📖 and Industry 💼, I specialize in Machine Learning 🤖, Computer Vision 🖼️, Natural Language Processing (NLP) 🔤, and Large Language Models (LLMs) 🏆.
+With a strong foundation in Academia 📖 and Industry 💼, I specialize in Machine Learning 🤖, Computer Vision 🖼️, and Large Language Models (LLMs) 🏆.
 Passionate about AI innovation, I focus on software development, building efficient models, and developing scalable AI solutions to create impactful, real-world applications. 
 
 Let's collaborate and build something amazing! ✨  
