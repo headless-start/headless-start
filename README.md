@@ -3,7 +3,7 @@
 
 <br>
 
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=28&duration=3500&pause=800&color=7C7BF7&center=true&vCenter=true&width=540&lines=AI+Engineer+%7C+Computer+Vision;MSc+Thesis+%40+BTU+Cottbus;PyTorch+%E2%80%A2+ViT+%E2%80%A2+PEFT+%E2%80%A2+LoRA;Turning+research+into+real-world+AI)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=28&duration=3500&pause=800&color=7C7BF7&center=true&vCenter=true&width=600&lines=AI+Engineer+%7C+Computer+Vision;Machine+Learning+%26+Deep+Learning;Always+learning%2C+always+building)](https://git.io/typing-svg)
 
 <p align="left">
   <img src="https://komarev.com/ghpvc/?username=headless-start&label=Profile%20Views&color=7C7BF7&style=for-the-badge" alt="profile views" />
@@ -14,20 +14,10 @@
 
 ## 👨‍💻 About Me
 
-🎓 AI Engineer and MSc candidate at **BTU Cottbus–Senftenberg**, working at the intersection of **Computer Vision** and **efficient deep learning**.
+With a strong foundation in Academia 📖 and Industry 💼, I specialize in Machine Learning 🤖, Computer Vision 🖼️, and Large Language Models (LLMs) 🏆.
+Passionate about AI innovation, I focus on software development, building efficient models, and developing scalable AI solutions to create impactful, real-world applications. 
 
-🔬 My thesis tackles **parameter-efficient transfer learning** — adapting large Vision Transformers to facial expression recognition for driver monitoring using lightweight methods like **LoRA** and **adapters**, instead of full fine-tuning.
-
-💡 I like turning research into clean, reproducible pipelines: strong models, sensible engineering, and results you can actually trust. Always happy to collaborate on CV, transformers, or applied ML.
-
-## 🔭 Current Focus
-
-Researching **how to specialise large vision models on small datasets** — adapting pretrained Vision Transformers to in-cabin facial expression recognition while training only a tiny fraction of parameters.
-
-- 🧠 Vision Transformers (ViT) for facial expression recognition
-- ⚡ Parameter-efficient fine-tuning — LoRA & Houlsby adapters
-- 🚗 Driver emotion monitoring under real-world constraints
-- 📊 Reproducible training with Hydra configs + Weights & Biases tracking
+Let's collaborate and build something amazing! ✨  
 
 ---
 
@@ -36,7 +26,7 @@ Researching **how to specialise large vision models on small datasets** — adap
 Find me on:
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/headlessstart/)
-[![LeetCode](https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](https://leetcode.com/u/headless_start/)
+[![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=leetcode&logoColor=FFA116)](https://leetcode.com/u/headless_start/)
 [![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:tiwari.ayush@b-tu.de)
 
 ---
@@ -86,9 +76,11 @@ Here are some of the technologies and tools I work with:
 
 ---
 
-## 💭 Dev Quote
+## 💬 A Guiding Thought
 
-![Quote](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
+> *"We can only see a short distance ahead, but we can see plenty there that needs to be done."*
+>
+> — **Alan Turing**, *Computing Machinery and Intelligence* (1950)
 
 ---
 
@@ -96,11 +88,15 @@ Here are some of the technologies and tools I work with:
 
 Here's a snapshot of my GitHub activity:
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=headless-start&show_icons=true&theme=radical&cache_seconds=175)
+![GitHub Stats](https://github-profile-summary-cards.vercel.app/api/cards/stats?username=headless-start&theme=radical)
 
-![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=headless-start&how_icons=true&theme=radical&cache_seconds=170)
+![GitHub Streak](https://streak-stats.demolab.com/?user=headless-start&theme=radical)
 
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=headless-start&layout=compact&theme=radical&cache_seconds=175)
+---
+
+## 💻 Most Used Languages
+
+![Repos per Language](https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=headless-start&theme=radical) ![Most Committed Language](https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=headless-start&theme=radical)
 
 ---
 
@@ -110,8 +106,9 @@ Here's a snapshot of my GitHub activity:
 
 ---
 
-## 🏆 GitHub Trophies  
-![GitHub Trophies](https://github-profile-trophy.vercel.app/?username=headless-start&theme=radical&no-frame=true&no-bg=false&margin-w=4&cache=170)
+## 🏆 Profile Summary
+
+![Profile Summary](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=headless-start&theme=radical)
 
 ---
 
