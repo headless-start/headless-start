@@ -3,14 +3,31 @@
 
 <br>
 
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=&size=32&duration=4500&pause=1000&color=7C7BF7&center=true&vCenter=true&random=false&width=435&lines=Motivated+AI+Engineer)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=28&duration=3500&pause=800&color=7C7BF7&center=true&vCenter=true&width=540&lines=AI+Engineer+%7C+Computer+Vision;MSc+Thesis+%40+BTU+Cottbus;PyTorch+%E2%80%A2+ViT+%E2%80%A2+PEFT+%E2%80%A2+LoRA;Turning+research+into+real-world+AI)](https://git.io/typing-svg)
+
+<p align="left">
+  <img src="https://komarev.com/ghpvc/?username=headless-start&label=Profile%20Views&color=7C7BF7&style=for-the-badge" alt="profile views" />
+  <a href="https://github.com/headless-start?tab=followers">
+    <img src="https://img.shields.io/github/followers/headless-start?label=Followers&style=for-the-badge&color=7C7BF7&logo=github&logoColor=white" alt="followers" />
+  </a>
+</p>
 
 ## 👨‍💻 About Me
 
-With a strong foundation in Academia 📖 and Industry 💼, I specialize in Machine Learning 🤖, Computer Vision 🖼️, and Large Language Models (LLMs) 🏆.
-Passionate about AI innovation, I focus on software development, building efficient models, and developing scalable AI solutions to create impactful, real-world applications. 
+🎓 AI Engineer and MSc candidate at **BTU Cottbus–Senftenberg**, working at the intersection of **Computer Vision** and **efficient deep learning**.
 
-Let's collaborate and build something amazing! ✨  
+🔬 My thesis tackles **parameter-efficient transfer learning** — adapting large Vision Transformers to facial expression recognition for driver monitoring using lightweight methods like **LoRA** and **adapters**, instead of full fine-tuning.
+
+💡 I like turning research into clean, reproducible pipelines: strong models, sensible engineering, and results you can actually trust. Always happy to collaborate on CV, transformers, or applied ML.
+
+## 🔭 Current Focus
+
+Researching **how to specialise large vision models on small datasets** — adapting pretrained Vision Transformers to in-cabin facial expression recognition while training only a tiny fraction of parameters.
+
+- 🧠 Vision Transformers (ViT) for facial expression recognition
+- ⚡ Parameter-efficient fine-tuning — LoRA & Houlsby adapters
+- 🚗 Driver emotion monitoring under real-world constraints
+- 📊 Reproducible training with Hydra configs + Weights & Biases tracking
 
 ---
 
@@ -69,6 +86,12 @@ Here are some of the technologies and tools I work with:
 
 ---
 
+## 💭 Dev Quote
+
+![Quote](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
+
+---
+
 ## 📈 GitHub Stats
 
 Here's a snapshot of my GitHub activity:
@@ -81,11 +104,15 @@ Here's a snapshot of my GitHub activity:
 
 ---
 
+## 📊 Contribution Graph
+
+![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=headless-start&theme=react-dark&hide_border=true&bg_color=1a1b27&color=7C7BF7&line=7C7BF7&point=ffffff&area=true)
+
+---
+
 ## 🏆 GitHub Trophies  
 ![GitHub Trophies](https://github-profile-trophy.vercel.app/?username=headless-start&theme=radical&no-frame=true&no-bg=false&margin-w=4&cache=170)
 
 ---
 
 ⭐️ Thanks for visiting my profile! Have a great day! 😄
-
-[![](https://visitcount.itsvg.in/api?id=headless-start&icon=8&color=8)](https://visitcount.itsvg.in)
