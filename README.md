@@ -14,10 +14,14 @@
 
 ## 👨‍💻 About Me
 
-With a strong foundation in Academia 📖 and Industry 💼, I specialize in Machine Learning 🤖, Computer Vision 🖼️, and Large Language Models (LLMs) 🏆.
-Passionate about AI innovation, I focus on software development, building efficient models, and developing scalable AI solutions to create impactful, real-world applications. 
+Hey! 👋 I'm an **AI Engineer** who likes turning research ideas into things that actually run. I work across **Machine Learning** 🤖, **Computer Vision** 🖼️, and **Large Language Models** 🧠 — from training efficient models to shipping them as real, usable applications.
 
-Let's collaborate and build something amazing! ✨  
+- 🔭 Currently building **[peft-vit-demo](https://github.com/headless-start/peft-vit-demo)** — parameter-efficient fine-tuning of Vision Transformers with LoRA
+- 🌱 Always exploring deep learning, transformers, and efficient model adaptation
+- 💬 Happy to talk computer vision, transformers, or anything applied ML
+- ⚡ Fun fact: my favourite challenge is squeezing big models into small compute budgets
+
+Let's connect and build something impactful together! ✨  
 
 ---
 
@@ -77,6 +81,19 @@ Here are some of the technologies and tools I work with:
 
 ---
 
+## 🚀 Featured Projects
+
+| Project | What it does | Tech |
+| --- | --- | --- |
+| [**peft-vit-demo**](https://github.com/headless-start/peft-vit-demo) | LoRA fine-tuning of a ViT-B/16 on Oxford-IIIT Pets | PyTorch · timm · Hydra · W&B |
+| [**bias-aware-kmeans**](https://github.com/headless-start/bias-aware-kmeans) | Greedy preprocessing + K-Means for large-scale biased data | scikit-learn |
+| [**data-augmentation-impact**](https://github.com/headless-start/data-augmentation-impact) | How data augmentation shapes model training | Jupyter · CV |
+| [**deepseek-chatbot-clone**](https://github.com/headless-start/deepseek-chatbot-clone) | DeepSeek chatbot clone with 4-language support | Python · LLM API |
+| [**real-time-sketch**](https://github.com/headless-start/real-time-sketch) | Real-time sketch generation via adaptive thresholding | OpenCV |
+| [**yolov4-tiny-raspberrypi**](https://github.com/headless-start/yolov4-tiny-raspberrypi) | YOLOv4-Tiny object detection deployed on Raspberry Pi | YOLO · Edge |
+
+---
+
 ## 💬 A Guiding Thought
 
 > *"We can only see a short distance ahead, but we can see plenty there that needs to be done."*
@@ -113,4 +130,6 @@ Here's a snapshot of my GitHub activity:
 
 ---
 
-⭐️ Thanks for visiting my profile! Have a great day! 😄
+⭐️ Thanks for visiting — have a great day! 😄
+
+![Footer](https://capsule-render.vercel.app/api?type=waving&color=gradient&height=140&section=footer&text=Let's%20build%20something%20great!&fontSize=26&fontColor=ffffff&fontAlignY=65&animation=fadeIn)
