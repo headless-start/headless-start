@@ -14,12 +14,7 @@
 
 ## 👨‍💻 About Me
 
-Hey! 👋 I'm an **AI Engineer** who likes turning research ideas into things that actually run. I work across **Machine Learning** 🤖, **Computer Vision** 🖼️, and **Large Language Models** 🧠 — from training efficient models to shipping them as real, usable applications.
-
-- 🔭 Currently building **[peft-vit-demo](https://github.com/headless-start/peft-vit-demo)** — parameter-efficient fine-tuning of Vision Transformers with LoRA
-- 🌱 Always exploring deep learning, transformers, and efficient model adaptation
-- 💬 Happy to talk computer vision, transformers, or anything applied ML
-- ⚡ Fun fact: my favourite challenge is squeezing big models into small compute budgets
+Hey! 👋 I'm an **AI Engineer** working across **Machine Learning** 🤖, **Computer Vision** 🖼️, and **Large Language Models** 🧠 — I enjoy turning research ideas into clean, usable applications.
 
 Let's connect and build something impactful together! ✨  
 
@@ -49,48 +44,16 @@ Here are some of the technologies and tools I work with:
 ![Tableau](https://img.shields.io/badge/Tableau-E97627?style=for-the-badge&logo=tableau&logoColor=white) ![Power BI](https://img.shields.io/badge/Power%20BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black) ![MS Excel](https://img.shields.io/badge/Microsoft%20Excel-217346?style=for-the-badge&logo=microsoftexcel&logoColor=white) ![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white) ![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white) ![Matplotlib](https://img.shields.io/badge/Matplotlib-008080?style=for-the-badge&logo=matplotlib&logoColor=white)
 
 ### Machine Learning & Deep Learning
-![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
-![Keras](https://img.shields.io/badge/Keras-D00000?style=for-the-badge&logo=keras&logoColor=white)
-![Scikit-Learn](https://img.shields.io/badge/Scikit_Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
-![Hugging Face](https://img.shields.io/badge/Hugging%20Face-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white) ![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white) ![Keras](https://img.shields.io/badge/Keras-D00000?style=for-the-badge&logo=keras&logoColor=white) ![Scikit-Learn](https://img.shields.io/badge/Scikit_Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white) ![Hugging Face](https://img.shields.io/badge/Hugging%20Face-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black) ![spaCy](https://img.shields.io/badge/spaCy-09A3D5?style=for-the-badge&logo=spacy&logoColor=white) ![Dialogflow](https://img.shields.io/badge/Dialogflow-FF9800?style=for-the-badge&logo=dialogflow&logoColor=white) ![Weights & Biases](https://img.shields.io/badge/Weights%20%26%20Biases-FFBE00?style=for-the-badge&logo=weightsandbiases&logoColor=black) ![Hydra](https://img.shields.io/badge/Hydra-1697A6?style=for-the-badge) ![CUDA](https://img.shields.io/badge/CUDA-76B900?style=for-the-badge&logo=nvidia&logoColor=white)
 
 ### Computer Vision & Transformers
-![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white)
-![timm](https://img.shields.io/badge/timm-1A1A1A?style=for-the-badge&logo=pytorch&logoColor=EE4C2C)
-![Vision Transformers](https://img.shields.io/badge/Vision%20Transformers%20(ViT)-654FF0?style=for-the-badge)
-![PEFT](https://img.shields.io/badge/PEFT%20%7C%20LoRA%20%7C%20Adapters-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)
-![YOLO](https://img.shields.io/badge/YOLO-1A1A1A?style=for-the-badge)
+![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white) ![timm](https://img.shields.io/badge/timm-1A1A1A?style=for-the-badge&logo=pytorch&logoColor=EE4C2C) ![Vision Transformers](https://img.shields.io/badge/Vision%20Transformers%20(ViT)-654FF0?style=for-the-badge) ![PEFT](https://img.shields.io/badge/PEFT%20%7C%20LoRA%20%7C%20Adapters-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black) ![YOLO](https://img.shields.io/badge/YOLO-1A1A1A?style=for-the-badge)
 
-### MLOps & Experiment Tracking
-![Weights & Biases](https://img.shields.io/badge/Weights%20%26%20Biases-FFBE00?style=for-the-badge&logo=weightsandbiases&logoColor=black)
-![Hydra](https://img.shields.io/badge/Hydra-1697A6?style=for-the-badge)
-![CUDA](https://img.shields.io/badge/CUDA-76B900?style=for-the-badge&logo=nvidia&logoColor=white)
+### Databases
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white) ![SQLite](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)
 
-### Natural Language Processing
-![spaCy](https://img.shields.io/badge/spaCy-09A3D5?style=for-the-badge&logo=spacy&logoColor=white) ![Dialogflow](https://img.shields.io/badge/Dialogflow-FF9800?style=for-the-badge&logo=dialogflow&logoColor=white)
-
-### Database Management
-![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)  ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)  ![SQLite](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)  
-
-### Dev Environment
-![Jupyter Notebook](https://img.shields.io/badge/Jupyter-FA0F00?style=for-the-badge&logo=jupyter&logoColor=white)  ![Google Colab](https://img.shields.io/badge/Google%20Colab-F9AB00?style=for-the-badge&logo=googlecolab&logoColor=white)  ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)  ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)  ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)  ![Raspberry Pi](https://img.shields.io/badge/Raspberry%20Pi-A22846?style=for-the-badge&logo=raspberrypi&logoColor=white)  
-
-### Other Tools  
-![Canva](https://img.shields.io/badge/Canva-00C4CC?style=for-the-badge&logo=canva&logoColor=white) ![ChatGPT](https://img.shields.io/badge/ChatGPT-00A67E?style=for-the-badge&logo=openai&logoColor=white) ![LaTeX](https://img.shields.io/badge/LaTeX-008080?style=for-the-badge&logo=latex&logoColor=white) ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
-
----
-
-## 🚀 Featured Projects
-
-| Project | What it does | Tech |
-| --- | --- | --- |
-| [**peft-vit-demo**](https://github.com/headless-start/peft-vit-demo) | LoRA fine-tuning of a ViT-B/16 on Oxford-IIIT Pets | PyTorch · timm · Hydra · W&B |
-| [**bias-aware-kmeans**](https://github.com/headless-start/bias-aware-kmeans) | Greedy preprocessing + K-Means for large-scale biased data | scikit-learn |
-| [**data-augmentation-impact**](https://github.com/headless-start/data-augmentation-impact) | How data augmentation shapes model training | Jupyter · CV |
-| [**deepseek-chatbot-clone**](https://github.com/headless-start/deepseek-chatbot-clone) | DeepSeek chatbot clone with 4-language support | Python · LLM API |
-| [**real-time-sketch**](https://github.com/headless-start/real-time-sketch) | Real-time sketch generation via adaptive thresholding | OpenCV |
-| [**yolov4-tiny-raspberrypi**](https://github.com/headless-start/yolov4-tiny-raspberrypi) | YOLOv4-Tiny object detection deployed on Raspberry Pi | YOLO · Edge |
+### Tools & Environment
+![Jupyter Notebook](https://img.shields.io/badge/Jupyter-FA0F00?style=for-the-badge&logo=jupyter&logoColor=white) ![Google Colab](https://img.shields.io/badge/Google%20Colab-F9AB00?style=for-the-badge&logo=googlecolab&logoColor=white) ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white) ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white) ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black) ![Raspberry Pi](https://img.shields.io/badge/Raspberry%20Pi-A22846?style=for-the-badge&logo=raspberrypi&logoColor=white) ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white) ![Canva](https://img.shields.io/badge/Canva-00C4CC?style=for-the-badge&logo=canva&logoColor=white) ![LaTeX](https://img.shields.io/badge/LaTeX-008080?style=for-the-badge&logo=latex&logoColor=white)
 
 ---
 
