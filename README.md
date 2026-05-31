@@ -56,6 +56,7 @@ Here are some of the technologies and tools I work with:
 ![timm](https://img.shields.io/badge/timm-1A1A1A?style=for-the-badge&logo=pytorch&logoColor=EE4C2C)
 ![Vision Transformers](https://img.shields.io/badge/Vision%20Transformers%20(ViT)-654FF0?style=for-the-badge)
 ![PEFT](https://img.shields.io/badge/PEFT%20%7C%20LoRA%20%7C%20Adapters-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)
+![YOLO](https://img.shields.io/badge/YOLO-1A1A1A?style=for-the-badge)
 
 ### MLOps & Experiment Tracking
 ![Weights & Biases](https://img.shields.io/badge/Weights%20%26%20Biases-FFBE00?style=for-the-badge&logo=weightsandbiases&logoColor=black)
@@ -69,10 +70,10 @@ Here are some of the technologies and tools I work with:
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)  ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)  ![SQLite](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)  
 
 ### Dev Environment
-![Jupyter Notebook](https://img.shields.io/badge/Jupyter-FA0F00?style=for-the-badge&logo=jupyter&logoColor=white)  ![Google Colab](https://img.shields.io/badge/Google%20Colab-F9AB00?style=for-the-badge&logo=googlecolab&logoColor=white)  ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)  ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)  ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)  
+![Jupyter Notebook](https://img.shields.io/badge/Jupyter-FA0F00?style=for-the-badge&logo=jupyter&logoColor=white)  ![Google Colab](https://img.shields.io/badge/Google%20Colab-F9AB00?style=for-the-badge&logo=googlecolab&logoColor=white)  ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)  ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)  ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)  ![Raspberry Pi](https://img.shields.io/badge/Raspberry%20Pi-A22846?style=for-the-badge&logo=raspberrypi&logoColor=white)  
 
 ### Other Tools  
-![Canva](https://img.shields.io/badge/Canva-00C4CC?style=for-the-badge&logo=canva&logoColor=white) ![ChatGPT](https://img.shields.io/badge/ChatGPT-00A67E?style=for-the-badge&logo=openai&logoColor=white) ![LaTeX](https://img.shields.io/badge/LaTeX-008080?style=for-the-badge&logo=latex&logoColor=white)
+![Canva](https://img.shields.io/badge/Canva-00C4CC?style=for-the-badge&logo=canva&logoColor=white) ![ChatGPT](https://img.shields.io/badge/ChatGPT-00A67E?style=for-the-badge&logo=openai&logoColor=white) ![LaTeX](https://img.shields.io/badge/LaTeX-008080?style=for-the-badge&logo=latex&logoColor=white) ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
 
 ---
 
@@ -88,27 +89,27 @@ Here are some of the technologies and tools I work with:
 
 Here's a snapshot of my GitHub activity:
 
-![GitHub Stats](https://github-profile-summary-cards.vercel.app/api/cards/stats?username=headless-start&theme=radical)
+![GitHub Stats](https://github-profile-summary-cards.vercel.app/api/cards/stats?username=headless-start&theme=radical&v=20260601)
 
-![GitHub Streak](https://streak-stats.demolab.com/?user=headless-start&theme=radical)
+![GitHub Streak](https://streak-stats.demolab.com/?user=headless-start&theme=radical&v=20260601)
 
 ---
 
 ## 💻 Most Used Languages
 
-![Repos per Language](https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=headless-start&theme=radical) ![Most Committed Language](https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=headless-start&theme=radical)
+![Repos per Language](https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=headless-start&theme=radical&v=20260601) ![Most Committed Language](https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=headless-start&theme=radical&v=20260601)
 
 ---
 
 ## 📊 Contribution Graph
 
-![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=headless-start&theme=react-dark&hide_border=true&bg_color=1a1b27&color=7C7BF7&line=7C7BF7&point=ffffff&area=true)
+![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=headless-start&theme=react-dark&hide_border=true&bg_color=1a1b27&color=7C7BF7&line=7C7BF7&point=ffffff&area=true&v=20260601)
 
 ---
 
 ## 🏆 Profile Summary
 
-![Profile Summary](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=headless-start&theme=radical)
+![Profile Summary](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=headless-start&theme=radical&v=20260601)
 
 ---
 
