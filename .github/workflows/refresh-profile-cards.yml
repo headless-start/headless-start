@@ -1,0 +1,67 @@
+name: refresh-profile-cards
+
+# Re-fetches the GitHub stat/language/activity cards and commits them as
+# static SVGs under assets/. The README points at those committed files, so
+# it renders even when the upstream card services are rate-limited or down.
+# A fetch failure never overwrites a previously-good card.
+
+on:
+  schedule:
+    - cron: "17 4 * * *"   # daily, 04:17 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch cards (keep last good copy on failure)
+        shell: bash
+        run: |
+          mkdir -p assets
+          cards=(
+            "stats|https://github-profile-summary-cards.vercel.app/api/cards/stats?username=headless-start&theme=radical"
+            "repos-per-language|https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=headless-start&theme=radical"
+            "most-commit-language|https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=headless-start&theme=radical"
+            "profile-summary|https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=headless-start&theme=radical"
+            "streak|https://streak-stats.demolab.com/?user=headless-start&theme=radical&hide_border=true"
+            "activity-graph|https://github-readme-activity-graph.vercel.app/graph?username=headless-start&theme=react-dark&hide_border=true&bg_color=1a1b27&color=7C7BF7&line=7C7BF7&point=ffffff&area=true"
+          )
+          for entry in "${cards[@]}"; do
+            name="${entry%%|*}"
+            url="${entry#*|}"
+            ok=0
+            for attempt in 1 2 3; do
+              tmp="$(mktemp)"
+              code="$(curl -s -m 30 -o "$tmp" -w '%{http_code}' "$url")"
+              if [ "$code" = "200" ] && head -c 64 "$tmp" | grep -qi '<svg'; then
+                mv "$tmp" "assets/$name.svg"
+                echo "ok: $name"
+                ok=1
+                break
+              fi
+              rm -f "$tmp"
+              echo "attempt $attempt failed for $name (HTTP $code)"
+              sleep 5
+            done
+            if [ "$ok" = "0" ]; then
+              echo "kept previous assets/$name.svg (upstream unavailable)"
+            fi
+          done
+
+      - name: Commit if changed
+        shell: bash
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [ -n "$(git status --porcelain assets)" ]; then
+            git add assets
+            git commit -m "refresh profile cards"
+            git push
+          else
+            echo "no changes"
+          fi
