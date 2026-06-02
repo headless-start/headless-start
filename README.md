@@ -69,27 +69,27 @@ Here are some of the technologies and tools I work with:
 
 Here's a snapshot of my GitHub activity:
 
-![GitHub Stats](https://github-profile-summary-cards.vercel.app/api/cards/stats?username=headless-start&theme=radical&v=20260601)
+![GitHub Stats](assets/stats.svg)
 
-![GitHub Streak](https://streak-stats.demolab.com/?user=headless-start&theme=radical&v=20260601)
+![GitHub Streak](assets/streak.svg)
 
 ---
 
 ## 💻 Most Used Languages
 
-![Repos per Language](https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=headless-start&theme=radical&v=20260601) ![Most Committed Language](https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=headless-start&theme=radical&v=20260601)
+![Repos per Language](assets/repos-per-language.svg) ![Most Committed Language](assets/most-commit-language.svg)
 
 ---
 
 ## 📊 Contribution Graph
 
-![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=headless-start&theme=react-dark&hide_border=true&bg_color=1a1b27&color=7C7BF7&line=7C7BF7&point=ffffff&area=true&v=20260601)
+![Activity Graph](assets/activity-graph.svg)
 
 ---
 
 ## 🏆 Profile Summary
 
-![Profile Summary](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=headless-start&theme=radical&v=20260601)
+![Profile Summary](assets/profile-summary.svg)
 
 ---
 
