@@ -5,13 +5,6 @@
 
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=28&duration=3500&pause=800&color=7C7BF7&center=true&vCenter=true&width=600&lines=AI+Engineer+%7C+Computer+Vision;Machine+Learning+%26+Deep+Learning;Always+learning%2C+always+building)](https://git.io/typing-svg)
 
-<p align="left">
-  <img src="https://komarev.com/ghpvc/?username=headless-start&label=Profile%20Views&color=7C7BF7&style=for-the-badge" alt="profile views" />
-  <a href="https://github.com/headless-start?tab=followers">
-    <img src="https://img.shields.io/github/followers/headless-start?label=Followers&style=for-the-badge&color=7C7BF7&logo=github&logoColor=white" alt="followers" />
-  </a>
-</p>
-
 ## 👨‍💻 About Me
 
 Hey! 👋 I'm an **AI Engineer** working across **Machine Learning** 🤖, **Computer Vision** 🖼️, and **Large Language Models** 🧠 — I enjoy turning research ideas into clean, usable applications.
