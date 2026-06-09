@@ -86,6 +86,16 @@ Here's a snapshot of my GitHub activity:
 
 ---
 
+## 🐍 Watch the Snake Eat My Contributions
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/snake-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/snake-light.svg">
+  <img alt="snake eating my GitHub contribution graph" src="assets/snake-dark.svg">
+</picture>
+
+---
+
 ⭐️ Thanks for visiting — have a great day! 😄
 
 ![Footer](https://capsule-render.vercel.app/api?type=waving&color=gradient&height=140&section=footer&text=Let's%20build%20something%20great!&fontSize=26&fontColor=ffffff&fontAlignY=65&animation=fadeIn)

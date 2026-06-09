@@ -1,0 +1,46 @@
+name: generate-snake
+
+# Regenerates the contribution-graph snake animation and commits it as static
+# SVGs under assets/ (dark + light). The README points at those committed
+# files, matching the refresh-profile-cards pattern, so it renders reliably.
+
+on:
+  schedule:
+    - cron: "23 */12 * * *"   # twice a day at :23 UTC
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: generate-snake
+  cancel-in-progress: true
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate snake SVGs
+        uses: Platane/snk@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            assets/snake-dark.svg?palette=github-dark
+            assets/snake-light.svg?palette=github-light
+
+      - name: Commit if changed
+        shell: bash
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [ -n "$(git status --porcelain assets)" ]; then
+            git add assets
+            git commit -m "regenerate snake animation"
+            git push
+          else
+            echo "no changes"
+          fi
