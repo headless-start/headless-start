@@ -46,6 +46,9 @@ Here are some of the technologies and tools I work with:
 ### LLMs & RAG
 ![OpenAI API](https://img.shields.io/badge/OpenAI%20API-412991?style=for-the-badge&logo=openai&logoColor=white) ![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white) ![Sentence Transformers](https://img.shields.io/badge/Sentence--Transformers-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black) ![ChromaDB](https://img.shields.io/badge/ChromaDB-FF6B35?style=for-the-badge) ![Qdrant](https://img.shields.io/badge/Qdrant-DC244C?style=for-the-badge) ![RAGAS](https://img.shields.io/badge/RAGAS-2E5C6E?style=for-the-badge)
 
+### Agentic AI
+![LangChain Agents](https://img.shields.io/badge/LangChain%20Agents-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white) ![LangGraph](https://img.shields.io/badge/LangGraph-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white) ![n8n](https://img.shields.io/badge/n8n-EA4B71?style=for-the-badge&logo=n8n&logoColor=white) ![Tool Use](https://img.shields.io/badge/Tool%20Use%20%26%20Function%20Calling-412991?style=for-the-badge&logo=openai&logoColor=white) ![MCP](https://img.shields.io/badge/MCP-000000?style=for-the-badge) ![Multi-Agent](https://img.shields.io/badge/Multi--Agent%20Orchestration-654FF0?style=for-the-badge) ![ReAct](https://img.shields.io/badge/ReAct-FF6F61?style=for-the-badge) ![RAGAS](https://img.shields.io/badge/RAGAS-2E5C6E?style=for-the-badge) ![Opik](https://img.shields.io/badge/Opik-1E90FF?style=for-the-badge)
+
 ### Databases
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white) ![SQLite](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)
 
