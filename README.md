@@ -3,11 +3,11 @@
 
 <br>
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=28&duration=3500&pause=800&color=7C7BF7&center=true&vCenter=true&width=600&lines=AI+Engineer+%7C+Computer+Vision;Machine+Learning+%26+Deep+Learning;Always+learning%2C+always+building)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=28&duration=3500&pause=800&color=7C7BF7&center=true&vCenter=true&width=600&lines=AI+%2F+ML+Engineer;RAG+%C2%B7+LLMs+%C2%B7+Computer+Vision+%C2%B7+Data+Science;Always+learning%2C+always+building)](https://git.io/typing-svg)
 
 ## 👨‍💻 About Me
 
-Hey! 👋 I'm an **AI Engineer** working across **Machine Learning** 🤖, **Computer Vision** 🖼️, and **Large Language Models** 🧠 — I enjoy turning research ideas into clean, usable applications.
+Hey! 👋 I'm an **AI/ML Engineer** working across **LLMs & RAG** 🧠, **Agentic AI** 🤖, **Computer Vision** 🖼️, and **Data Science** 📊 — I enjoy turning research ideas into clean, usable applications.
 
 Let's connect and build something impactful together! ✨  
 
@@ -20,7 +20,7 @@ Find me on:
 [![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://ayush-portfolio-lac-pi.vercel.app)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/headlessstart/)
 [![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=leetcode&logoColor=FFA116)](https://leetcode.com/u/headless_start/)
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:tiwari.ayush@b-tu.de)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:ayushtiwariat99@gmail.com)
 
 ---
 
