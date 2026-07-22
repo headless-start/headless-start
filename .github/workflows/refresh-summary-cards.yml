@@ -6,9 +6,9 @@ name: refresh-summary-cards
 # depends on a public card host at view time.
 #
 # A card is committed only if it passes the guard in the promote step: a valid
-# <svg>, no rate-limit/error text, a sane size, and some real (non-zero) data.
-# Anything else is dropped and the previous good copy is kept, so a rate-limited
-# or empty response can never replace a good card.
+# <svg>, no rate-limit/error text, a sane size, and a label the card always
+# renders. Anything else is dropped and the previous good copy is kept, so a
+# rate-limited or unpopulated response can never replace a good card.
 #
 # Token: uses the SUMMARY_GITHUB_TOKEN secret (a personal access token) when
 # present, otherwise the built-in token. The built-in Actions token often
@@ -47,21 +47,25 @@ jobs:
         run: |
           set -u
           src="profile-summary-card-output/radical"
+          # promote <candidate> <dest> <label>  - only replaces the committed
+          # card if the candidate is a real <svg>, carries no error text, is a
+          # sane size, and contains <label>, a word that card always renders
+          # (so an errored or unpopulated card is dropped and last-good kept).
           promote() {
-            cand="$1"; dest="$2"
+            cand="$1"; dest="$2"; label="$3"
             if [ ! -s "$cand" ]; then echo "keep $(basename "$dest") - no candidate produced"; return 0; fi
             if ! head -c 256 "$cand" | grep -qi '<svg'; then echo "keep $(basename "$dest") - not an svg"; return 0; fi
             if grep -qiE 'rate.?limit|maximum retries|too many requests|something went wrong|ERROR!!!|try again|could not|not found' "$cand"; then
               echo "keep $(basename "$dest") - error/rate-limit card"; return 0; fi
             sz=$(wc -c < "$cand")
             if [ "$sz" -lt 500 ]; then echo "keep $(basename "$dest") - too small (${sz}b)"; return 0; fi
-            if ! grep -qE '>[^<]*[1-9][^<]*<' "$cand"; then echo "keep $(basename "$dest") - no data (all zero?)"; return 0; fi
+            if ! grep -qiF "$label" "$cand"; then echo "keep $(basename "$dest") - no '$label' (unpopulated card)"; return 0; fi
             mkdir -p assets; cp "$cand" "$dest"; echo "update $(basename "$dest") (${sz}b)"
           }
-          promote "$src/3-stats.svg"                assets/stats.svg
-          promote "$src/1-repos-per-language.svg"   assets/repos-per-language.svg
-          promote "$src/2-most-commit-language.svg" assets/most-commit-language.svg
-          promote "$src/0-profile-details.svg"      assets/profile-summary.svg
+          promote "$src/3-stats.svg"                assets/stats.svg                Total
+          promote "$src/1-repos-per-language.svg"   assets/repos-per-language.svg   Language
+          promote "$src/2-most-commit-language.svg" assets/most-commit-language.svg Language
+          promote "$src/0-profile-details.svg"      assets/profile-summary.svg      Joined
 
       - name: Commit if changed
         shell: bash
