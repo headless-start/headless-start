@@ -67,6 +67,22 @@ jobs:
           promote "$src/2-most-commit-language.svg" assets/most-commit-language.svg Language
           promote "$src/0-profile-details.svg"      assets/profile-summary.svg      Joined
 
+      - name: Personalise profile card
+        shell: bash
+        run: |
+          f="assets/profile-summary.svg"
+          [ -s "$f" ] || exit 0
+          # Show the preferred contact address instead of the account's public
+          # email that the generator picks up.
+          sed -i -E 's/[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}/ayushtiwariat99@gmail.com/g' "$f"
+          # The generator floors the join age to whole years ("3 years" at 3.9).
+          # Show one decimal computed from the account creation date instead.
+          created="2023-01-05T06:40:32Z"   # account created_at, fixed for life
+          yrs=$(awk -v s="$(date -d "$created" +%s)" -v n="$(date +%s)" 'BEGIN{printf "%.1f", (n-s)/31557600}')
+          yrs="${yrs%.0}"
+          sed -i -E "s/Joined GitHub [^<]+ ago/Joined GitHub $yrs years ago/" "$f"
+          grep -o 'Joined GitHub [^<]*' "$f" || true
+
       - name: Commit if changed
         shell: bash
         run: |
