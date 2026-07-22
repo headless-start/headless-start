@@ -1,0 +1,78 @@
+name: refresh-summary-cards
+
+# Generates the GitHub summary cards (stats, top languages by repo/commit,
+# profile details) INSIDE Actions with the repo's own token, then commits them
+# as static SVGs under assets/. The README points at those files, so it never
+# depends on a public card host at view time.
+#
+# A card is committed only if it passes the guard in the promote step: a valid
+# <svg>, no rate-limit/error text, a sane size, and some real (non-zero) data.
+# Anything else is dropped and the previous good copy is kept, so a rate-limited
+# or empty response can never replace a good card.
+#
+# Token: uses the SUMMARY_GITHUB_TOKEN secret (a personal access token) when
+# present, otherwise the built-in token. The built-in Actions token often
+# returns incomplete commit/contribution stats, which the guard then rejects
+# (keeping the last good card), so the PAT is what keeps the stats fresh.
+
+on:
+  schedule:
+    - cron: "17 6 * * *"     # daily at 06:17 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-assets      # shared with the other asset workflows so pushes serialise
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate summary cards
+        uses: vn7n24fzkq/github-profile-summary-cards@39ae44423d8702dfbd64c7f407278fdd7a1b0c75  # v0.11.6
+        env:
+          GITHUB_TOKEN: ${{ secrets.SUMMARY_GITHUB_TOKEN || github.token }}
+        with:
+          USERNAME: ${{ github.repository_owner }}
+          THEME: radical
+          AUTO_PUSH: false
+
+      - name: Promote cards (guard, keep last good on any failure)
+        shell: bash
+        run: |
+          set -u
+          src="profile-summary-card-output/radical"
+          promote() {
+            cand="$1"; dest="$2"
+            if [ ! -s "$cand" ]; then echo "keep $(basename "$dest") - no candidate produced"; return 0; fi
+            if ! head -c 256 "$cand" | grep -qi '<svg'; then echo "keep $(basename "$dest") - not an svg"; return 0; fi
+            if grep -qiE 'rate.?limit|maximum retries|too many requests|something went wrong|ERROR!!!|try again|could not|not found' "$cand"; then
+              echo "keep $(basename "$dest") - error/rate-limit card"; return 0; fi
+            sz=$(wc -c < "$cand")
+            if [ "$sz" -lt 500 ]; then echo "keep $(basename "$dest") - too small (${sz}b)"; return 0; fi
+            if ! grep -qE '>[^<]*[1-9][^<]*<' "$cand"; then echo "keep $(basename "$dest") - no data (all zero?)"; return 0; fi
+            mkdir -p assets; cp "$cand" "$dest"; echo "update $(basename "$dest") (${sz}b)"
+          }
+          promote "$src/3-stats.svg"                assets/stats.svg
+          promote "$src/1-repos-per-language.svg"   assets/repos-per-language.svg
+          promote "$src/2-most-commit-language.svg" assets/most-commit-language.svg
+          promote "$src/0-profile-details.svg"      assets/profile-summary.svg
+
+      - name: Commit if changed
+        shell: bash
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [ -z "$(git status --porcelain assets)" ]; then echo "no changes"; exit 0; fi
+          git add assets
+          git commit -m "refresh summary cards"
+          for i in 1 2 3 4 5; do
+            if git pull --rebase origin "${GITHUB_REF_NAME}" && git push; then echo "pushed"; exit 0; fi
+            echo "push retry $i"; sleep 3
+          done
+          echo "push failed after retries"; exit 1
