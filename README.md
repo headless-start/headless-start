@@ -4,7 +4,7 @@
 <br>
 
 <div align="center">
-  <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=28&duration=3500&pause=800&color=7C7BF7&center=true&vCenter=true&width=780&lines=AI+%2F+ML+Engineer;RAG+%C2%B7+LLMs+%C2%B7+Computer+Vision+%C2%B7+Data+Science;Always+learning%2C+always+building" alt="Typing SVG" /></a>
+  <a href="https://github.com/DenverCoder1/readme-typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=28&duration=3500&pause=800&color=7C7BF7&center=true&vCenter=true&width=780&lines=AI+%2F+ML+Engineer;RAG+%C2%B7+LLMs+%C2%B7+Computer+Vision+%C2%B7+Data+Science;Always+learning%2C+always+building" alt="Typing SVG" /></a>
 </div>
 
 ## 👨‍💻 About Me
