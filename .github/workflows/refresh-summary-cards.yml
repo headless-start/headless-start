@@ -24,7 +24,8 @@ permissions:
   contents: write
 
 concurrency:
-  group: profile-assets      # shared with the other asset workflows so pushes serialise
+  group: ${{ github.workflow }}   # one run of this workflow at a time; the card
+                                  # workflows write different files and retry pushes
   cancel-in-progress: false
 
 jobs:
@@ -75,6 +76,9 @@ jobs:
           # Show the preferred contact address instead of the account's public
           # email that the generator picks up.
           sed -i -E 's/[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}/ayushtiwariat99@gmail.com/g' "$f"
+          # The generator titles the card "login (Name)" and cuts it off with an
+          # ellipsis ("headless-start (Ayus…)"). Show the full name instead.
+          sed -i -E 's#(font-size: 22px;[^>]*>)[^<]*</text>#\1Ayush Tiwari</text>#' "$f"
           # The generator floors the join age to whole years ("3 years" at 3.9).
           # Show one decimal computed from the account creation date instead.
           created="2023-01-05T06:40:32Z"   # account created_at, fixed for life

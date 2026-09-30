@@ -1,0 +1,101 @@
+name: sync-profile
+
+# Keeps the whole README in step with the public repos. Every hour it takes a
+# fingerprint of the owner's public repos (names, languages, last push, stars,
+# visibility). When that fingerprint is new, it:
+#   1. adds tech-stack badges for new languages / libraries (sync_tech_stack.py)
+#   2. rebuilds the Tech Stack rows and badges (build_tech_stack.py)
+#   3. triggers every card workflow (summary cards, streak + activity graph,
+#      snake) so the stats and language cards catch up straight away
+# The fingerprint lives in the Actions cache, so an unchanged hour costs a few
+# seconds and makes no commit. The daily card schedules still run as a backstop.
+
+on:
+  schedule:
+    - cron: "7 * * * *"      # hourly at :07 UTC
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - tech-stack.json
+      - scripts/**
+      - .github/workflows/sync-profile.yml
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: sync-profile
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+      PROFILE_OWNER: ${{ github.repository_owner }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fingerprint public repos
+        id: fp
+        shell: bash
+        run: |
+          set -euo pipefail
+          hash=$(gh api --paginate "users/$PROFILE_OWNER/repos?type=owner&per_page=100" \
+            --jq '.[] | [.name, .private, .fork, .archived, .language, .pushed_at, .stargazers_count] | @tsv' \
+            | sort | sha256sum | cut -c1-16)
+          echo "hash=$hash" >> "$GITHUB_OUTPUT"
+
+      - name: Seen this fingerprint already?
+        id: seen
+        if: github.event_name == 'schedule'
+        uses: actions/cache/restore@v4
+        with:
+          path: .repo-fingerprint
+          key: repo-fp-${{ steps.fp.outputs.hash }}
+          lookup-only: true
+
+      - name: Sync and rebuild tech stack
+        if: steps.seen.outputs.cache-hit != 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 scripts/sync_tech_stack.py
+          python3 scripts/build_tech_stack.py
+
+      - name: Commit if changed
+        if: steps.seen.outputs.cache-hit != 'true'
+        shell: bash
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [ -z "$(git status --porcelain README.md tech-stack.json assets)" ]; then echo "tech stack unchanged"; exit 0; fi
+          git add README.md tech-stack.json assets
+          git commit -m "sync tech stack with public repos"
+          for i in 1 2 3 4 5; do
+            if git pull --rebase origin "${GITHUB_REF_NAME}" && git push; then echo "pushed"; exit 0; fi
+            echo "push retry $i"; sleep 3
+          done
+          echo "push failed after retries"; exit 1
+
+      - name: Refresh all cards
+        if: steps.seen.outputs.cache-hit != 'true'
+        shell: bash
+        run: |
+          for wf in refresh-summary-cards.yml refresh-external-cards.yml generate-snake.yml; do
+            gh workflow run "$wf" --ref "${GITHUB_REF_NAME}" && echo "triggered $wf"
+          done
+
+      - name: Remember fingerprint
+        if: steps.seen.outputs.cache-hit != 'true'
+        shell: bash
+        run: echo "${{ steps.fp.outputs.hash }}" > .repo-fingerprint
+
+      - name: Save fingerprint
+        if: steps.seen.outputs.cache-hit != 'true'
+        uses: actions/cache/save@v4
+        with:
+          path: .repo-fingerprint
+          key: repo-fp-${{ steps.fp.outputs.hash }}

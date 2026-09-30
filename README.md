@@ -23,9 +23,11 @@ Let's connect and build something impactful together! ✨
 
 ## 🛠️ Tech Stack
 
+<!-- tech-stack:start -->
+
 **Languages & Data**
 
-<p><img src="assets/tech-python.svg" width="117" alt="Python">&#8203;<img src="assets/tech-typescript.svg" width="137" alt="TypeScript">&#8203;<img src="assets/tech-postgresql.svg" width="141" alt="PostgreSQL">&#8203;<img src="assets/tech-bash.svg" width="105" alt="Bash">&#8203;<img src="assets/tech-numpy.svg" width="117" alt="NumPy">&#8203;<img src="assets/tech-pandas.svg" width="117" alt="Pandas">&#8203;<img src="assets/tech-matplotlib.svg" width="112" alt="Matplotlib"></p>
+<p><img src="assets/tech-python.svg" width="104" alt="Python">&#8203;<img src="assets/tech-typescript.svg" width="124" alt="TypeScript">&#8203;<img src="assets/tech-rust.svg" width="90" alt="Rust">&#8203;<img src="assets/tech-bash.svg" width="92" alt="Bash">&#8203;<img src="assets/tech-postgresql.svg" width="128" alt="PostgreSQL">&#8203;<img src="assets/tech-numpy.svg" width="104" alt="NumPy">&#8203;<img src="assets/tech-pandas.svg" width="104" alt="Pandas">&#8203;<img src="assets/tech-matplotlib.svg" width="100" alt="Matplotlib"></p>
 
 **ML & Computer Vision**
 
@@ -35,9 +37,11 @@ Let's connect and build something impactful together! ✨
 
 <p><img src="assets/tech-openai.svg" width="83" alt="OpenAI">&#8203;<img src="assets/tech-langchain.svg" width="117" alt="LangChain">&#8203;<img src="assets/tech-langgraph.svg" width="121" alt="LangGraph">&#8203;<img src="assets/tech-ollama.svg" width="99" alt="Ollama">&#8203;<img src="assets/tech-chromadb.svg" width="101" alt="ChromaDB">&#8203;<img src="assets/tech-qdrant.svg" width="81" alt="Qdrant">&#8203;<img src="assets/tech-ragas.svg" width="81" alt="RAGAS">&#8203;<img src="assets/tech-mcp.svg" width="83" alt="MCP">&#8203;<img src="assets/tech-n8n.svg" width="80" alt="n8n"></p>
 
-**Tools & MLOps**
+**Tools & Frameworks**
 
-<p><img src="assets/tech-docker.svg" width="137" alt="Docker">&#8203;<img src="assets/tech-fastapi.svg" width="139" alt="FastAPI">&#8203;<img src="assets/tech-streamlit.svg" width="149" alt="Streamlit">&#8203;<img src="assets/tech-github-actions.svg" width="179" alt="GitHub Actions">&#8203;<img src="assets/tech-git.svg" width="114" alt="Git">&#8203;<img src="assets/tech-linux.svg" width="128" alt="Linux"></p>
+<p><img src="assets/tech-docker.svg" width="106" alt="Docker">&#8203;<img src="assets/tech-fastapi.svg" width="108" alt="FastAPI">&#8203;<img src="assets/tech-streamlit.svg" width="117" alt="Streamlit">&#8203;<img src="assets/tech-github-actions.svg" width="147" alt="GitHub Actions">&#8203;<img src="assets/tech-git.svg" width="81" alt="Git">&#8203;<img src="assets/tech-linux.svg" width="95" alt="Linux">&#8203;<img src="assets/tech-react.svg" width="97" alt="React">&#8203;<img src="assets/tech-tauri.svg" width="95" alt="Tauri"></p>
+
+<!-- tech-stack:end -->
 
 ---
 

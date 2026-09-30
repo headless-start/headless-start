@@ -16,7 +16,8 @@ permissions:
   contents: write
 
 concurrency:
-  group: profile-assets      # shared with the other asset workflows so pushes serialise
+  group: ${{ github.workflow }}   # one run of this workflow at a time; the card
+                                  # workflows write different files and retry pushes
   cancel-in-progress: false
 
 jobs:

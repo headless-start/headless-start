@@ -1,0 +1,722 @@
+{
+ "width": 846,
+ "groups": [
+  {
+   "group": "Languages & Data",
+   "badges": [
+    {
+     "name": "Python",
+     "color": "3776AB",
+     "logo": "python"
+    },
+    {
+     "name": "TypeScript",
+     "color": "3178C6",
+     "logo": "typescript"
+    },
+    {
+     "name": "Rust",
+     "color": "000000",
+     "logo": "rust"
+    },
+    {
+     "name": "Bash",
+     "color": "4EAA25",
+     "logo": "gnubash"
+    },
+    {
+     "name": "PostgreSQL",
+     "color": "4169E1",
+     "logo": "postgresql"
+    },
+    {
+     "name": "NumPy",
+     "color": "013243",
+     "logo": "numpy"
+    },
+    {
+     "name": "Pandas",
+     "color": "150458",
+     "logo": "pandas"
+    },
+    {
+     "name": "Matplotlib",
+     "color": "11557C"
+    }
+   ]
+  },
+  {
+   "group": "ML & Computer Vision",
+   "badges": [
+    {
+     "name": "PyTorch",
+     "color": "EE4C2C",
+     "logo": "pytorch"
+    },
+    {
+     "name": "TensorFlow",
+     "color": "FF6F00",
+     "logo": "tensorflow"
+    },
+    {
+     "name": "scikit-learn",
+     "color": "F7931E",
+     "logo": "scikitlearn"
+    },
+    {
+     "name": "Hugging Face",
+     "color": "FFD21E",
+     "logo": "huggingface",
+     "logoColor": "black"
+    },
+    {
+     "name": "OpenCV",
+     "color": "5C3EE8",
+     "logo": "opencv"
+    },
+    {
+     "name": "YOLO",
+     "color": "111F68"
+    },
+    {
+     "name": "PEFT / LoRA",
+     "color": "6E40C9"
+    },
+    {
+     "name": "Weights & Biases",
+     "color": "FFBE00",
+     "logo": "weightsandbiases",
+     "logoColor": "black"
+    }
+   ]
+  },
+  {
+   "group": "LLMs, RAG & Agents",
+   "badges": [
+    {
+     "name": "OpenAI",
+     "color": "412991"
+    },
+    {
+     "name": "LangChain",
+     "color": "1C3C3C",
+     "logo": "langchain"
+    },
+    {
+     "name": "LangGraph",
+     "color": "1C3C3C",
+     "logo": "langgraph"
+    },
+    {
+     "name": "Ollama",
+     "color": "000000",
+     "logo": "ollama"
+    },
+    {
+     "name": "ChromaDB",
+     "color": "FF6B35"
+    },
+    {
+     "name": "Qdrant",
+     "color": "DC244C"
+    },
+    {
+     "name": "RAGAS",
+     "color": "2E5C6E"
+    },
+    {
+     "name": "MCP",
+     "color": "000000",
+     "logo": "modelcontextprotocol"
+    },
+    {
+     "name": "n8n",
+     "color": "EA4B71",
+     "logo": "n8n"
+    }
+   ]
+  },
+  {
+   "group": "Tools & Frameworks",
+   "badges": [
+    {
+     "name": "Docker",
+     "color": "2496ED",
+     "logo": "docker"
+    },
+    {
+     "name": "FastAPI",
+     "color": "009688",
+     "logo": "fastapi"
+    },
+    {
+     "name": "Streamlit",
+     "color": "FF4B4B",
+     "logo": "streamlit"
+    },
+    {
+     "name": "GitHub Actions",
+     "color": "2088FF",
+     "logo": "githubactions"
+    },
+    {
+     "name": "Git",
+     "color": "F05032",
+     "logo": "git"
+    },
+    {
+     "name": "Linux",
+     "color": "FCC624",
+     "logo": "linux",
+     "logoColor": "black"
+    },
+    {
+     "name": "React",
+     "color": "20232A",
+     "logo": "react",
+     "logoColor": "61DAFB"
+    },
+    {
+     "name": "Tauri",
+     "color": "24C8D8",
+     "logo": "tauri"
+    }
+   ]
+  }
+ ],
+ "seen": [
+  "Bash",
+  "ChromaDB",
+  "Docker",
+  "FastAPI",
+  "Git",
+  "GitHub Actions",
+  "Hugging Face",
+  "LangChain",
+  "LangGraph",
+  "Linux",
+  "MCP",
+  "Matplotlib",
+  "NumPy",
+  "Ollama",
+  "OpenAI",
+  "OpenCV",
+  "PEFT / LoRA",
+  "Pandas",
+  "PostgreSQL",
+  "PyTorch",
+  "Python",
+  "Qdrant",
+  "RAGAS",
+  "React",
+  "Rust",
+  "Streamlit",
+  "Tauri",
+  "TensorFlow",
+  "TypeScript",
+  "Weights & Biases",
+  "YOLO",
+  "n8n",
+  "scikit-learn"
+ ],
+ "catalog": [
+  {
+   "name": "Python",
+   "color": "3776AB",
+   "group": "Languages & Data",
+   "match": [
+    "lang:python",
+    "lang:jupyter notebook"
+   ],
+   "logo": "python"
+  },
+  {
+   "name": "TypeScript",
+   "color": "3178C6",
+   "group": "Languages & Data",
+   "match": [
+    "lang:typescript"
+   ],
+   "logo": "typescript"
+  },
+  {
+   "name": "Rust",
+   "color": "000000",
+   "group": "Languages & Data",
+   "match": [
+    "lang:rust"
+   ],
+   "logo": "rust"
+  },
+  {
+   "name": "Go",
+   "color": "00ADD8",
+   "group": "Languages & Data",
+   "match": [
+    "lang:go"
+   ],
+   "logo": "go"
+  },
+  {
+   "name": "C++",
+   "color": "00599C",
+   "group": "Languages & Data",
+   "match": [
+    "lang:c++"
+   ],
+   "logo": "cplusplus"
+  },
+  {
+   "name": "Java",
+   "color": "ED8B00",
+   "group": "Languages & Data",
+   "match": [
+    "lang:java"
+   ],
+   "logo": "openjdk"
+  },
+  {
+   "name": "Kotlin",
+   "color": "7F52FF",
+   "group": "Languages & Data",
+   "match": [
+    "lang:kotlin"
+   ],
+   "logo": "kotlin"
+  },
+  {
+   "name": "R",
+   "color": "276DC3",
+   "group": "Languages & Data",
+   "match": [
+    "lang:r"
+   ],
+   "logo": "r"
+  },
+  {
+   "name": "Bash",
+   "color": "4EAA25",
+   "group": "Languages & Data",
+   "match": [
+    "lang:shell"
+   ],
+   "logo": "gnubash"
+  },
+  {
+   "name": "PostgreSQL",
+   "color": "4169E1",
+   "group": "Languages & Data",
+   "match": [
+    "py:psycopg2",
+    "py:psycopg2-binary",
+    "py:psycopg",
+    "py:asyncpg",
+    "npm:pg"
+   ],
+   "logo": "postgresql"
+  },
+  {
+   "name": "MongoDB",
+   "color": "47A248",
+   "group": "Languages & Data",
+   "match": [
+    "py:pymongo",
+    "py:motor",
+    "npm:mongodb",
+    "npm:mongoose"
+   ],
+   "logo": "mongodb"
+  },
+  {
+   "name": "Redis",
+   "color": "DC382D",
+   "group": "Languages & Data",
+   "match": [
+    "py:redis",
+    "npm:redis",
+    "npm:ioredis"
+   ],
+   "logo": "redis"
+  },
+  {
+   "name": "NumPy",
+   "color": "013243",
+   "group": "Languages & Data",
+   "match": [
+    "py:numpy"
+   ],
+   "logo": "numpy"
+  },
+  {
+   "name": "Pandas",
+   "color": "150458",
+   "group": "Languages & Data",
+   "match": [
+    "py:pandas"
+   ],
+   "logo": "pandas"
+  },
+  {
+   "name": "Polars",
+   "color": "CD792C",
+   "group": "Languages & Data",
+   "match": [
+    "py:polars"
+   ],
+   "logo": "polars"
+  },
+  {
+   "name": "Matplotlib",
+   "color": "11557C",
+   "group": "Languages & Data",
+   "match": [
+    "py:matplotlib"
+   ]
+  },
+  {
+   "name": "Plotly",
+   "color": "3F4F75",
+   "group": "Languages & Data",
+   "match": [
+    "py:plotly",
+    "npm:plotly.js"
+   ],
+   "logo": "plotly"
+  },
+  {
+   "name": "PyTorch",
+   "color": "EE4C2C",
+   "group": "ML & Computer Vision",
+   "match": [
+    "py:torch"
+   ],
+   "logo": "pytorch"
+  },
+  {
+   "name": "TensorFlow",
+   "color": "FF6F00",
+   "group": "ML & Computer Vision",
+   "match": [
+    "py:tensorflow",
+    "py:tensorflow-cpu"
+   ],
+   "logo": "tensorflow"
+  },
+  {
+   "name": "scikit-learn",
+   "color": "F7931E",
+   "group": "ML & Computer Vision",
+   "match": [
+    "py:scikit-learn"
+   ],
+   "logo": "scikitlearn"
+  },
+  {
+   "name": "Hugging Face",
+   "color": "FFD21E",
+   "group": "ML & Computer Vision",
+   "match": [
+    "py:transformers",
+    "py:datasets",
+    "py:huggingface-hub",
+    "py:diffusers"
+   ],
+   "logo": "huggingface",
+   "logoColor": "black"
+  },
+  {
+   "name": "OpenCV",
+   "color": "5C3EE8",
+   "group": "ML & Computer Vision",
+   "match": [
+    "py:opencv-python",
+    "py:opencv-python-headless",
+    "py:opencv-contrib-python"
+   ],
+   "logo": "opencv"
+  },
+  {
+   "name": "YOLO",
+   "color": "111F68",
+   "group": "ML & Computer Vision",
+   "match": [
+    "py:ultralytics"
+   ]
+  },
+  {
+   "name": "PEFT / LoRA",
+   "color": "6E40C9",
+   "group": "ML & Computer Vision",
+   "match": [
+    "py:peft"
+   ]
+  },
+  {
+   "name": "Weights & Biases",
+   "color": "FFBE00",
+   "group": "ML & Computer Vision",
+   "match": [
+    "py:wandb"
+   ],
+   "logo": "weightsandbiases",
+   "logoColor": "black"
+  },
+  {
+   "name": "XGBoost",
+   "color": "337AB7",
+   "group": "ML & Computer Vision",
+   "match": [
+    "py:xgboost"
+   ]
+  },
+  {
+   "name": "LightGBM",
+   "color": "02569B",
+   "group": "ML & Computer Vision",
+   "match": [
+    "py:lightgbm"
+   ]
+  },
+  {
+   "name": "JAX",
+   "color": "A8B1FF",
+   "group": "ML & Computer Vision",
+   "match": [
+    "py:jax"
+   ]
+  },
+  {
+   "name": "ONNX",
+   "color": "005CED",
+   "group": "ML & Computer Vision",
+   "match": [
+    "py:onnx",
+    "py:onnxruntime"
+   ],
+   "logo": "onnx"
+  },
+  {
+   "name": "MLflow",
+   "color": "0194E2",
+   "group": "ML & Computer Vision",
+   "match": [
+    "py:mlflow"
+   ],
+   "logo": "mlflow"
+  },
+  {
+   "name": "OpenAI",
+   "color": "412991",
+   "group": "LLMs, RAG & Agents",
+   "match": [
+    "py:openai",
+    "npm:openai"
+   ]
+  },
+  {
+   "name": "LangChain",
+   "color": "1C3C3C",
+   "group": "LLMs, RAG & Agents",
+   "match": [
+    "py:langchain",
+    "py:langchain-core",
+    "py:langchain-community",
+    "npm:langchain"
+   ],
+   "logo": "langchain"
+  },
+  {
+   "name": "LangGraph",
+   "color": "1C3C3C",
+   "group": "LLMs, RAG & Agents",
+   "match": [
+    "py:langgraph",
+    "npm:@langchain/langgraph"
+   ],
+   "logo": "langgraph"
+  },
+  {
+   "name": "LlamaIndex",
+   "color": "000000",
+   "group": "LLMs, RAG & Agents",
+   "match": [
+    "py:llama-index",
+    "py:llama-index-core"
+   ]
+  },
+  {
+   "name": "Ollama",
+   "color": "000000",
+   "group": "LLMs, RAG & Agents",
+   "match": [
+    "py:ollama",
+    "npm:ollama"
+   ],
+   "logo": "ollama"
+  },
+  {
+   "name": "ChromaDB",
+   "color": "FF6B35",
+   "group": "LLMs, RAG & Agents",
+   "match": [
+    "py:chromadb"
+   ]
+  },
+  {
+   "name": "Qdrant",
+   "color": "DC244C",
+   "group": "LLMs, RAG & Agents",
+   "match": [
+    "py:qdrant-client"
+   ]
+  },
+  {
+   "name": "FAISS",
+   "color": "0467DF",
+   "group": "LLMs, RAG & Agents",
+   "match": [
+    "py:faiss-cpu",
+    "py:faiss-gpu"
+   ]
+  },
+  {
+   "name": "Pinecone",
+   "color": "000000",
+   "group": "LLMs, RAG & Agents",
+   "match": [
+    "py:pinecone",
+    "py:pinecone-client"
+   ]
+  },
+  {
+   "name": "RAGAS",
+   "color": "2E5C6E",
+   "group": "LLMs, RAG & Agents",
+   "match": [
+    "py:ragas"
+   ]
+  },
+  {
+   "name": "MCP",
+   "color": "000000",
+   "group": "LLMs, RAG & Agents",
+   "match": [
+    "py:mcp",
+    "py:fastmcp",
+    "npm:@modelcontextprotocol/sdk"
+   ],
+   "logo": "modelcontextprotocol"
+  },
+  {
+   "name": "Docker",
+   "color": "2496ED",
+   "group": "Tools & Frameworks",
+   "match": [
+    "lang:dockerfile"
+   ],
+   "logo": "docker"
+  },
+  {
+   "name": "FastAPI",
+   "color": "009688",
+   "group": "Tools & Frameworks",
+   "match": [
+    "py:fastapi"
+   ],
+   "logo": "fastapi"
+  },
+  {
+   "name": "Flask",
+   "color": "000000",
+   "group": "Tools & Frameworks",
+   "match": [
+    "py:flask"
+   ],
+   "logo": "flask"
+  },
+  {
+   "name": "Django",
+   "color": "092E20",
+   "group": "Tools & Frameworks",
+   "match": [
+    "py:django"
+   ],
+   "logo": "django"
+  },
+  {
+   "name": "Streamlit",
+   "color": "FF4B4B",
+   "group": "Tools & Frameworks",
+   "match": [
+    "py:streamlit"
+   ],
+   "logo": "streamlit"
+  },
+  {
+   "name": "Gradio",
+   "color": "F97316",
+   "group": "Tools & Frameworks",
+   "match": [
+    "py:gradio"
+   ],
+   "logo": "gradio"
+  },
+  {
+   "name": "React",
+   "color": "20232A",
+   "group": "Tools & Frameworks",
+   "match": [
+    "npm:react"
+   ],
+   "logo": "react",
+   "logoColor": "61DAFB"
+  },
+  {
+   "name": "Next.js",
+   "color": "000000",
+   "group": "Tools & Frameworks",
+   "match": [
+    "npm:next"
+   ],
+   "logo": "nextdotjs"
+  },
+  {
+   "name": "Tailwind CSS",
+   "color": "06B6D4",
+   "group": "Tools & Frameworks",
+   "match": [
+    "npm:tailwindcss"
+   ],
+   "logo": "tailwindcss"
+  },
+  {
+   "name": "Tauri",
+   "color": "24C8D8",
+   "group": "Tools & Frameworks",
+   "match": [
+    "npm:@tauri-apps/api",
+    "cargo:tauri"
+   ],
+   "logo": "tauri"
+  },
+  {
+   "name": "Node.js",
+   "color": "5FA04E",
+   "group": "Tools & Frameworks",
+   "match": [
+    "npm:express",
+    "npm:fastify"
+   ],
+   "logo": "nodedotjs"
+  },
+  {
+   "name": "pytest",
+   "color": "0A9EDC",
+   "group": "Tools & Frameworks",
+   "match": [
+    "py:pytest"
+   ],
+   "logo": "pytest"
+  }
+ ]
+}
