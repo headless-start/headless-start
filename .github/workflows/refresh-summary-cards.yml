@@ -115,7 +115,7 @@ jobs:
           if [ "$code" != "200" ]; then
             echo "::error::SUMMARY_GITHUB_TOKEN no longer works (HTTP $code). Create a new token and update the repo secret."; exit 1
           fi
-          exp=$(grep -i '^github-authentication-token-expiration:' headers.txt | cut -d' ' -f2- | tr -d '\r')
+          exp=$(grep -i '^github-authentication-token-expiration:' headers.txt | cut -d' ' -f2- | tr -d '\r' || true)
           if [ -z "$exp" ]; then echo "token has no expiry date"; exit 0; fi
           left=$(( ( $(date -d "$exp" +%s) - $(date +%s) ) / 86400 ))
           echo "token expires $exp ($left days left)"
