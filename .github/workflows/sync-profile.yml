@@ -43,8 +43,10 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          # The profile repo is left out: the card workflows push to it every day,
+          # which would otherwise make every hour look like a change.
           repos=$(gh api --paginate "users/$PROFILE_OWNER/repos?type=owner&per_page=100" \
-            --jq '.[] | [.name, .private, .fork, .archived, .language, .pushed_at, .stargazers_count] | @tsv' | sort)
+            --jq ".[] | select(.name != \"$PROFILE_OWNER\") | [.name, .private, .fork, .archived, .language, .pushed_at, .stargazers_count] | @tsv" | sort)
           # GitHub counts new commits into contributions with a delay, so the
           # counts are part of the fingerprint too: the commit-language card
           # then refreshes once GitHub has caught up, not only on the next push.
