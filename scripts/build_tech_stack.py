@@ -9,6 +9,7 @@ Nothing is written unless every badge was fetched and parsed, so a shields.io
 outage keeps the last good badges instead of breaking the section.
 """
 
+import hashlib
 import html
 import json
 import re
@@ -105,8 +106,13 @@ def main():
         for line in lines:
             cells = []
             for i, W in zip(line, fit([x["w"] for x in line], total)):
-                fn = f"assets/tech-{slug(i['name'])}.svg"
-                files[fn] = draw(i, W)
+                svg = draw(i, W)
+                # GitHub serves README images with a 5 minute cache, so a badge
+                # that changes width keeps its old look for a while under the
+                # same name. A content hash in the name makes every change a
+                # new file.
+                fn = f"assets/tech-{slug(i['name'])}-{hashlib.sha1(svg.encode()).hexdigest()[:8]}.svg"
+                files[fn] = svg
                 cells.append(f'<img src="{fn}" width="{W}" alt="{html.escape(i["name"])}">')
             rows.append("<p>" + "&#8203;".join(cells) + "</p>")
         parts.append(f"**{g['group']}**\n\n" + "\n\n".join(rows))
