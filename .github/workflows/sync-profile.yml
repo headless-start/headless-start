@@ -66,9 +66,12 @@ jobs:
           hash=$(printf '%s\n%s\n' "$repos" "$commits" | sha256sum | cut -c1-16)
           echo "hash=$hash" >> "$GITHUB_OUTPUT"
 
+      # A push (new scripts or tech-stack.json) always rebuilds. Scheduled and
+      # triggered runs skip the rebuild when nothing changed, which also stops
+      # the card workflows and this one from starting each other in a loop.
       - name: Seen this fingerprint already?
         id: seen
-        if: github.event_name == 'schedule'
+        if: github.event_name != 'push'
         uses: actions/cache/restore@v4
         with:
           path: .repo-fingerprint
@@ -98,14 +101,6 @@ jobs:
           done
           echo "push failed after retries"; exit 1
 
-      - name: Refresh all cards
-        if: steps.seen.outputs.cache-hit != 'true'
-        shell: bash
-        run: |
-          for wf in refresh-summary-cards.yml refresh-external-cards.yml generate-snake.yml; do
-            gh workflow run "$wf" --ref "${GITHUB_REF_NAME}" && echo "triggered $wf"
-          done
-
       - name: Remember fingerprint
         if: steps.seen.outputs.cache-hit != 'true'
         shell: bash
@@ -118,6 +113,15 @@ jobs:
           path: .repo-fingerprint
           key: repo-fp-${{ steps.fp.outputs.hash }}
 
+      - name: Refresh all cards
+        if: steps.seen.outputs.cache-hit != 'true'
+        shell: bash
+        run: |
+          for wf in refresh-summary-cards.yml refresh-external-cards.yml generate-snake.yml; do
+            gh workflow run "$wf" --ref "${GITHUB_REF_NAME}" && echo "triggered $wf"
+          done
+
+
       - name: Check cards against the account
         id: health
         if: always()
@@ -126,13 +130,11 @@ jobs:
           git pull -q --rebase origin "${GITHUB_REF_NAME}" || true
           python3 scripts/check_profile.py
 
-      - name: Re-run card workflows for an out-of-date card
+      # The cards this check can find wrong come from the summary workflow,
+      # which starts nothing else, so re-running it cannot loop.
+      - name: Re-run the summary cards for an out-of-date card
         if: always() && steps.health.outputs.heal == 'true' && steps.seen.outputs.cache-hit == 'true'
-        shell: bash
-        run: |
-          for wf in refresh-summary-cards.yml refresh-external-cards.yml; do
-            gh workflow run "$wf" --ref "${GITHUB_REF_NAME}" && echo "triggered $wf"
-          done
+        run: gh workflow run refresh-summary-cards.yml --ref "${GITHUB_REF_NAME}"
 
       - name: Fail if a card is stuck
         if: always() && steps.health.outputs.stale == 'true'

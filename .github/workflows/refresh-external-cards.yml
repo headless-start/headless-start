@@ -1,19 +1,28 @@
 name: refresh-external-cards
 
-# Refreshes the two cards that have no first-party action (contribution streak
-# and the activity graph) by fetching them and committing static SVGs under
-# assets/. A response is committed only if it looks like a real card: a valid
-# <svg>, no error/rate-limit text, and the known labels that card always
-# carries. Anything else is dropped and the previous good copy is kept, so a
-# rate-limited response can never replace a good card.
+# Builds the contribution streak card and the activity graph from GitHub's own
+# contribution calendar (scripts/build_contribution_cards.py) and commits them
+# as static SVGs under assets/. These used to be fetched from free public card
+# services; the activity graph one shut down in August 2026 and the card sat on
+# old data, so nothing here depends on an outside service any more. If the
+# GitHub API fails, the last good cards are kept.
+#
+# Every run also:
+#   - re-enables all workflows in this repo. GitHub switches off scheduled
+#     workflows after 60 days without repo activity; re-enabling (a no-op
+#     while enabled) resets that timer, so the automation never goes quiet.
+#   - starts sync-profile, whose health check compares every card with the
+#     account. GitHub's hourly cron can lag or skip; this 6-hourly one has
+#     been reliable, so the check runs at least four times a day.
 
 on:
   schedule:
-    - cron: "37 6 * * *"     # daily at 06:37 UTC
+    - cron: "37 */6 * * *"   # every 6 hours at :37 UTC
   workflow_dispatch:
 
 permissions:
   contents: write
+  actions: write
 
 concurrency:
   group: ${{ github.workflow }}   # one run of this workflow at a time; the card
@@ -23,37 +32,14 @@ concurrency:
 jobs:
   refresh:
     runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+      PROFILE_OWNER: ${{ github.repository_owner }}
     steps:
       - uses: actions/checkout@v4
 
-      - name: Fetch cards (validate, keep last good on failure)
-        shell: bash
-        run: |
-          set -u
-          mkdir -p assets
-          # fetch <dest> <url> <required-label>...  -> only promotes a response
-          # that is a valid svg, error-free, and contains every required label.
-          fetch() {
-            dest="$1"; url="$2"; shift 2
-            for attempt in 1 2 3; do
-              tmp="$(mktemp)"
-              code="$(curl -s -m 30 -o "$tmp" -w '%{http_code}' "$url")"
-              if [ "$code" = "200" ] && head -c 256 "$tmp" | grep -qi '<svg'; then
-                bad=0
-                if grep -qiE 'rate.?limit|maximum retries|too many requests|not in whitelist|cURL error|could not|user not found|ERROR!!!|try again' "$tmp"; then bad=1; fi
-                for m in "$@"; do grep -qiF "$m" "$tmp" || bad=1; done
-                if [ "$bad" = 0 ]; then mv "$tmp" "$dest"; echo "update $(basename "$dest")"; return 0; fi
-              fi
-              rm -f "$tmp"; echo "attempt $attempt failed for $(basename "$dest") (HTTP $code)"; sleep 5
-            done
-            echo "keep $(basename "$dest") - upstream unavailable or invalid"; return 0
-          }
-          fetch assets/streak.svg \
-            "https://streak-stats.demolab.com/?user=headless-start&theme=radical&hide_border=true" \
-            "Current Streak" "Total Contributions"
-          fetch assets/activity-graph.svg \
-            "https://github-readme-activity-graph.vercel.app/graph?username=headless-start&theme=react-dark&hide_border=true&bg_color=1a1b27&color=7C7BF7&line=7C7BF7&point=ffffff&area=true" \
-            "card_bg"
+      - name: Build streak card and activity graph
+        run: python3 scripts/build_contribution_cards.py
 
       - name: Commit if changed
         shell: bash
@@ -68,3 +54,15 @@ jobs:
             echo "push retry $i"; sleep 3
           done
           echo "push failed after retries"; exit 1
+
+      - name: Keep every workflow enabled
+        if: always()
+        shell: bash
+        run: |
+          for id in $(gh api "repos/${GITHUB_REPOSITORY}/actions/workflows" --jq '.workflows[].id'); do
+            gh api -X PUT "repos/${GITHUB_REPOSITORY}/actions/workflows/$id/enable" && echo "enabled $id"
+          done
+
+      - name: Run the health check
+        if: always()
+        run: gh workflow run sync-profile.yml --ref "${GITHUB_REF_NAME}"

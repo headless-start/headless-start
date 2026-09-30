@@ -100,3 +100,25 @@ jobs:
             echo "push retry $i"; sleep 3
           done
           echo "push failed after retries"; exit 1
+
+      # The personal access token behind the stats expires. Without it the
+      # cards stop updating (the guard keeps the last good ones), so fail the
+      # run three weeks ahead: GitHub then emails a reminder to renew it.
+      - name: Warn before the stats token expires
+        if: always()
+        shell: bash
+        env:
+          PAT: ${{ secrets.SUMMARY_GITHUB_TOKEN }}
+        run: |
+          if [ -z "$PAT" ]; then echo "::warning::SUMMARY_GITHUB_TOKEN is not set; stats use the built-in token"; exit 0; fi
+          code=$(curl -s -o /dev/null -D headers.txt -w '%{http_code}' -H "Authorization: Bearer $PAT" https://api.github.com/user)
+          if [ "$code" != "200" ]; then
+            echo "::error::SUMMARY_GITHUB_TOKEN no longer works (HTTP $code). Create a new token and update the repo secret."; exit 1
+          fi
+          exp=$(grep -i '^github-authentication-token-expiration:' headers.txt | cut -d' ' -f2- | tr -d '\r')
+          if [ -z "$exp" ]; then echo "token has no expiry date"; exit 0; fi
+          left=$(( ( $(date -d "$exp" +%s) - $(date +%s) ) / 86400 ))
+          echo "token expires $exp ($left days left)"
+          if [ "$left" -lt 21 ]; then
+            echo "::error::SUMMARY_GITHUB_TOKEN expires in $left days ($exp). Create a new token and update the repo secret."; exit 1
+          fi
