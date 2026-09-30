@@ -4,11 +4,16 @@ name: sync-profile
 # fingerprint of the owner's public repos (names, languages, last push, stars,
 # visibility). When that fingerprint is new, it:
 #   1. adds tech-stack badges for new languages / libraries (sync_tech_stack.py)
-#   2. rebuilds the Tech Stack rows and badges (build_tech_stack.py)
+#   2. rebuilds the Socials and Tech Stack badge rows (build_badges.py)
 #   3. triggers every card workflow (summary cards, streak + activity graph,
 #      snake) so the stats and language cards catch up straight away
 # The fingerprint lives in the Actions cache, so an unchanged hour costs a few
 # seconds and makes no commit. The daily card schedules still run as a backstop.
+#
+# Every run, changed or not, ends with check_profile.py, which compares the
+# cards with the account. A wrong card makes it re-run the card workflows; a
+# card still wrong after 24h, or a broken badge row, fails the run so GitHub
+# sends an email.
 
 on:
   schedule:
@@ -37,6 +42,8 @@ jobs:
       PROFILE_OWNER: ${{ github.repository_owner }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0     # the health check reads when each card last changed
 
       - name: Fingerprint public repos
         id: fp
@@ -74,7 +81,7 @@ jobs:
         run: |
           set -euo pipefail
           python3 scripts/sync_tech_stack.py
-          python3 scripts/build_tech_stack.py
+          python3 scripts/build_badges.py
 
       - name: Commit if changed
         if: steps.seen.outputs.cache-hit != 'true'
@@ -110,3 +117,26 @@ jobs:
         with:
           path: .repo-fingerprint
           key: repo-fp-${{ steps.fp.outputs.hash }}
+
+      - name: Check cards against the account
+        id: health
+        if: always()
+        shell: bash
+        run: |
+          git pull -q --rebase origin "${GITHUB_REF_NAME}" || true
+          python3 scripts/check_profile.py
+
+      - name: Re-run card workflows for an out-of-date card
+        if: always() && steps.health.outputs.heal == 'true' && steps.seen.outputs.cache-hit == 'true'
+        shell: bash
+        run: |
+          for wf in refresh-summary-cards.yml refresh-external-cards.yml; do
+            gh workflow run "$wf" --ref "${GITHUB_REF_NAME}" && echo "triggered $wf"
+          done
+
+      - name: Fail if a card is stuck
+        if: always() && steps.health.outputs.stale == 'true'
+        shell: bash
+        run: |
+          echo "::error::A profile card has been wrong for over 24 hours. See the check step above."
+          exit 1

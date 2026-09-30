@@ -1,5 +1,39 @@
 {
  "width": 846,
+ "socials": [
+  {
+   "name": "Portfolio",
+   "href": "https://ayushtiwari-ai.vercel.app",
+   "color": "000000",
+   "logo": "vercel"
+  },
+  {
+   "name": "LinkedIn",
+   "href": "https://www.linkedin.com/in/headlessstart/",
+   "color": "0077B5",
+   "logoImage": "data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBmaWxsPSJ3aGl0ZSI+PHBhdGggZD0iTTIwLjQ0NyAyMC40NTJoLTMuNTU0di01LjU2OWMwLTEuMzI4LS4wMjctMy4wMzctMS44NTItMy4wMzctMS44NTMgMC0yLjEzNiAxLjQ0NS0yLjEzNiAyLjkzOXY1LjY2N0g5LjM1MVY5aDMuNDE0djEuNTYxaC4wNDZjLjQ3Ny0uOSAxLjYzNy0xLjg1IDMuMzctMS44NSAzLjYwMSAwIDQuMjY3IDIuMzcgNC4yNjcgNS40NTV2Ni4yODZ6TTUuMzM3IDcuNDMzYy0xLjE0NCAwLTIuMDYzLS45MjYtMi4wNjMtMi4wNjUgMC0xLjEzOC45Mi0yLjA2MyAyLjA2My0yLjA2MyAxLjE0IDAgMi4wNjQuOTI1IDIuMDY0IDIuMDYzIDAgMS4xMzktLjkyNSAyLjA2NS0yLjA2NCAyLjA2NXptMS43ODIgMTMuMDE5SDMuNTU1VjloMy41NjR2MTEuNDUyek0yMi4yMjUgMEgxLjc3MUMuNzkyIDAgMCAuNzc0IDAgMS43Mjl2MjAuNTQyQzAgMjMuMjI3Ljc5MiAyNCAxLjc3MSAyNGgyMC40NTFDMjMuMiAyNCAyNCAyMy4yMjcgMjQgMjIuMjcxVjEuNzI5QzI0IC43NzQgMjMuMiAwIDIyLjIyNSAweiIvPjwvc3ZnPg=="
+  },
+  {
+   "name": "LeetCode",
+   "href": "https://leetcode.com/u/headless_start/",
+   "color": "000000",
+   "logo": "leetcode",
+   "logoColor": "FFA116"
+  },
+  {
+   "name": "Hugging Face",
+   "href": "https://huggingface.co/headless-start",
+   "color": "FFD21E",
+   "logo": "huggingface",
+   "logoColor": "black"
+  },
+  {
+   "name": "Email",
+   "href": "mailto:ayushtiwariat99@gmail.com",
+   "color": "D14836",
+   "logo": "gmail"
+  }
+ ],
  "groups": [
   {
    "group": "Languages & Data",
