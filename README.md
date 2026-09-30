@@ -43,17 +43,15 @@ Let's connect and build something impactful together! ✨
 
 ## 📈 GitHub Stats
 
-Here's a snapshot of my GitHub activity:
+<p align="center">Here's a snapshot of my GitHub activity:</p>
 
-![GitHub Stats](assets/stats.svg)
-
-![GitHub Streak](assets/streak.svg)
+<p align="center"><img src="assets/stats.svg" width="337" alt="GitHub Stats"> <img src="assets/streak.svg" width="503" alt="GitHub Streak"></p>
 
 ---
 
 ## 💻 Most Used Languages
 
-![Repos per Language](assets/repos-per-language.svg) ![Most Committed Language](assets/most-commit-language.svg)
+<p align="center"><img src="assets/repos-per-language.svg" width="419" alt="Repos per Language"> <img src="assets/most-commit-language.svg" width="419" alt="Most Committed Language"></p>
 
 ---
 
@@ -79,6 +77,6 @@ Here's a snapshot of my GitHub activity:
 
 ---
 
-⭐️ Thanks for visiting — have a great day! 😄
+<p align="center">⭐️ Thanks for visiting — have a great day! 😄</p>
 
 ![Footer](https://capsule-render.vercel.app/api?type=waving&color=gradient&height=140&section=footer&text=Let's%20build%20something%20great!&fontSize=26&fontColor=ffffff&fontAlignY=65&animation=fadeIn)
