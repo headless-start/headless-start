@@ -43,9 +43,18 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          hash=$(gh api --paginate "users/$PROFILE_OWNER/repos?type=owner&per_page=100" \
-            --jq '.[] | [.name, .private, .fork, .archived, .language, .pushed_at, .stargazers_count] | @tsv' \
-            | sort | sha256sum | cut -c1-16)
+          repos=$(gh api --paginate "users/$PROFILE_OWNER/repos?type=owner&per_page=100" \
+            --jq '.[] | [.name, .private, .fork, .archived, .language, .pushed_at, .stargazers_count] | @tsv' | sort)
+          # GitHub counts new commits into contributions with a delay, so the
+          # counts are part of the fingerprint too: the commit-language card
+          # then refreshes once GitHub has caught up, not only on the next push.
+          commits=$(gh api graphql -f login="$PROFILE_OWNER" -f query='
+            query($login: String!) { user(login: $login) { contributionsCollection {
+              totalCommitContributions
+              commitContributionsByRepository(maxRepositories: 100) {
+                repository { name } contributions { totalCount } } } } }' \
+            --jq '.data.user.contributionsCollection | [.totalCommitContributions] + [.commitContributionsByRepository[] | "\(.repository.name)=\(.contributions.totalCount)"] | join(" ")')
+          hash=$(printf '%s\n%s\n' "$repos" "$commits" | sha256sum | cut -c1-16)
           echo "hash=$hash" >> "$GITHUB_OUTPUT"
 
       - name: Seen this fingerprint already?
