@@ -63,7 +63,7 @@ Let's connect and build something impactful together! ✨
 
 ## 🏆 Profile Summary
 
-![Profile Summary](assets/profile-summary.svg)
+<p align="center"><img src="assets/profile-summary.svg" width="846" alt="Profile Summary"></p>
 
 ---
 
