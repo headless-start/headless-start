@@ -31,7 +31,7 @@ Let's connect and build something impactful together! ✨
 
 **Languages & Data**
 
-<p><img src="assets/tech-python-0c1ba886.svg" width="104" alt="Python">&#8203;<img src="assets/tech-typescript-9e07c8bc.svg" width="127" alt="TypeScript">&#8203;<img src="assets/tech-rust-f1219a9a.svg" width="87" alt="Rust">&#8203;<img src="assets/tech-bash-f29670f3.svg" width="89" alt="Bash">&#8203;<img src="assets/tech-postgresql-3b82d42c.svg" width="132" alt="PostgreSQL">&#8203;<img src="assets/tech-numpy-8c266222.svg" width="104" alt="NumPy">&#8203;<img src="assets/tech-pandas-71a0a3df.svg" width="104" alt="Pandas">&#8203;<img src="assets/tech-matplotlib-88c1d136.svg" width="99" alt="Matplotlib"></p>
+<p><img src="assets/tech-python-09f79e75.svg" width="104" alt="Python">&#8203;<img src="assets/tech-typescript-9e07c8bc.svg" width="127" alt="TypeScript">&#8203;<img src="assets/tech-rust-f1219a9a.svg" width="87" alt="Rust">&#8203;<img src="assets/tech-bash-f29670f3.svg" width="89" alt="Bash">&#8203;<img src="assets/tech-postgresql-3b82d42c.svg" width="132" alt="PostgreSQL">&#8203;<img src="assets/tech-numpy-8c266222.svg" width="104" alt="NumPy">&#8203;<img src="assets/tech-pandas-71a0a3df.svg" width="104" alt="Pandas">&#8203;<img src="assets/tech-matplotlib-88c1d136.svg" width="99" alt="Matplotlib"></p>
 
 **ML & Computer Vision**
 
@@ -39,7 +39,7 @@ Let's connect and build something impactful together! ✨
 
 **LLMs, RAG & Agents**
 
-<p><img src="assets/tech-openai-54848ea6.svg" width="81" alt="OpenAI">&#8203;<img src="assets/tech-langchain-9dde1b51.svg" width="121" alt="LangChain">&#8203;<img src="assets/tech-langgraph-d53550dd.svg" width="126" alt="LangGraph">&#8203;<img src="assets/tech-ollama-1eca3858.svg" width="100" alt="Ollama">&#8203;<img src="assets/tech-chromadb-da1c360c.svg" width="102" alt="ChromaDB">&#8203;<img src="assets/tech-qdrant-8b48830d.svg" width="79" alt="Qdrant">&#8203;<img src="assets/tech-ragas-4ea3c169.svg" width="78" alt="RAGAS">&#8203;<img src="assets/tech-mcp-dbbe8260.svg" width="81" alt="MCP">&#8203;<img src="assets/tech-n8n-2cac2b6d.svg" width="78" alt="n8n"></p>
+<p><img src="assets/tech-openai-54848ea6.svg" width="81" alt="OpenAI">&#8203;<img src="assets/tech-langchain-9dde1b51.svg" width="121" alt="LangChain">&#8203;<img src="assets/tech-langgraph-d53550dd.svg" width="126" alt="LangGraph">&#8203;<img src="assets/tech-ollama-1eca3858.svg" width="100" alt="Ollama">&#8203;<img src="assets/tech-chromadb-da1c360c.svg" width="102" alt="ChromaDB">&#8203;<img src="assets/tech-qdrant-8b48830d.svg" width="79" alt="Qdrant">&#8203;<img src="assets/tech-ragas-4ea3c169.svg" width="78" alt="RAGAS">&#8203;<img src="assets/tech-mcp-dbbe8260.svg" width="81" alt="MCP">&#8203;<img src="assets/tech-n8n-ba723bbd.svg" width="78" alt="n8n"></p>
 
 **Tools & Frameworks**
 
